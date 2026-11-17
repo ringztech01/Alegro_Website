@@ -544,7 +544,7 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 .svc-node .sl-cross { fill: #fff; stroke: #fff; stroke-width: 2px; stroke-miterlimit: 10; }
 .svc-node .sl-pt { fill: #fff; }
 .svc-bg { position: relative; overflow: hidden; height: calc(100vw * 941 / 1672); background: var(--ink); width: 100vw; margin-left: calc(50% - 50vw); }
-.svc-bg__img { position: absolute; inset: 0; background: url('img/w/wide-roadworks.webp') center top / 100% 100% no-repeat; }
+.svc-bg__img { position: absolute; inset: 0; background: url('img/w/wide-team-plans.webp') center top / 100% 100% no-repeat; }
 .svc-callout { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 .svc-card { grid-column: 3 / span 10; background: #fff; padding: 1.5rem; }
 .svc-card .callout__heading { margin-bottom: 1.5rem; font-size: 1.5rem; line-height: 2rem; }
