@@ -452,7 +452,7 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 /* About: layout, type scale and breakpoints follow the reference (12-col container, image panel over the right 5/12). */
 .about { position: relative; background: #fff; z-index: 0; }
 .about-panel { display: none; position: absolute; top: 0; bottom: 0; left: 58.333333%; right: 0; overflow: hidden; background: var(--ink); }
-.about-panel__img, .about-quote__bg { background: linear-gradient(rgba(10,12,11,.62), rgba(10,12,11,.74)), url('img/w/about-roller.webp') 58% center / cover no-repeat; }
+.about-panel__img, .about-quote__bg { background: linear-gradient(rgba(10,12,11,.62), rgba(10,12,11,.74)), url('img/w/about-truck.webp') 36% center / cover no-repeat; }
 .about-panel__img { position: absolute; left: 0; right: 0; top: -4%; bottom: -4%; will-change: transform; }
 .about-tiles { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: repeat(18, minmax(0, 1fr)); }
 .about-tile { background: var(--ink); box-shadow: 0 0 0 .5px var(--ink); }
@@ -543,8 +543,8 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 .svc-node .sl-seg { fill: #fff; stroke: #fff; stroke-miterlimit: 10; }
 .svc-node .sl-cross { fill: #fff; stroke: #fff; stroke-width: 2px; stroke-miterlimit: 10; }
 .svc-node .sl-pt { fill: #fff; }
-.svc-bg { position: relative; overflow: hidden; height: calc(100vw * 1020 / 1542); background: var(--ink); width: 100vw; margin-left: calc(50% - 50vw); }
-.svc-bg__img { position: absolute; inset: 0; background: url('img/w/wide-drilling.webp') center top / 100% 100% no-repeat; }
+.svc-bg { position: relative; overflow: hidden; height: calc(100vw * 941 / 1672); background: var(--ink); width: 100vw; margin-left: calc(50% - 50vw); }
+.svc-bg__img { position: absolute; inset: 0; background: url('img/w/wide-roadworks.webp') center top / 100% 100% no-repeat; }
 .svc-callout { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 .svc-card { grid-column: 3 / span 10; background: #fff; padding: 1.5rem; }
 .svc-card .callout__heading { margin-bottom: 1.5rem; font-size: 1.5rem; line-height: 2rem; }
@@ -557,8 +557,8 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 @media (min-width: 768px) {
   .svc-container { max-width: 768px; margin-top: -20rem; }
   .svc-deco { top: 0; }
-  .svc-container { min-height: calc(100vw * 1020 / 1542); }
-  .svc-bg { position: absolute; top: 0; left: 50%; width: 100vw; margin-left: -50vw; height: calc(100vw * 1020 / 1542); }
+  .svc-container { min-height: calc(100vw * 941 / 1672); }
+  .svc-bg { position: absolute; top: 0; left: 50%; width: 100vw; margin-left: -50vw; height: calc(100vw * 941 / 1672); }
   .svc-card { grid-column: 7 / span 6; margin-top: 20rem; }
   .svc-card .callout__heading { margin-bottom: 2rem; font-size: 1.875rem; line-height: 2.25rem; }
   .svc-card .callout__subtext { margin-bottom: 2.5rem; padding-right: 1.5rem; font-size: 1.25rem; line-height: 1.75rem; }
