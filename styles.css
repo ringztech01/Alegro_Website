@@ -452,8 +452,8 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 /* About: layout, type scale and breakpoints follow the reference (12-col container, image panel over the right 5/12). */
 .about { position: relative; background: #fff; z-index: 0; }
 .about-panel { display: none; position: absolute; top: 0; bottom: 0; left: 58.333333%; right: 0; overflow: hidden; background: var(--ink); }
-.about-panel__img, .about-quote__bg { background: linear-gradient(rgba(10,12,11,.62), rgba(10,12,11,.74)), url('img/w/about-panel.webp') center / cover no-repeat; }
-.about-panel__img { position: absolute; left: 0; right: 0; top: -18%; bottom: -18%; will-change: transform; }
+.about-panel__img, .about-quote__bg { background: linear-gradient(rgba(10,12,11,.62), rgba(10,12,11,.74)), url('img/w/about-roller.webp') 58% center / cover no-repeat; }
+.about-panel__img { position: absolute; left: 0; right: 0; top: -4%; bottom: -4%; will-change: transform; }
 .about-tiles { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: repeat(18, minmax(0, 1fr)); }
 .about-tile { background: var(--ink); box-shadow: 0 0 0 .5px var(--ink); }
 .about-container { position: relative; width: 100%; margin-inline: auto; }
@@ -543,10 +543,8 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 .svc-node .sl-seg { fill: #fff; stroke: #fff; stroke-miterlimit: 10; }
 .svc-node .sl-cross { fill: #fff; stroke: #fff; stroke-width: 2px; stroke-miterlimit: 10; }
 .svc-node .sl-pt { fill: #fff; }
-.svc-bg { position: relative; overflow: hidden; height: min(75vw, 420px); background: var(--ink); width: 100vw; margin-left: calc(50% - 50vw); }
-.svc-bg__img { position: absolute; left: 0; right: 0; top: -22%; bottom: -22%; background: linear-gradient(rgba(10,12,11,.12), rgba(10,12,11,.2)), url('img/w/wide-solar.webp') center / cover no-repeat; will-change: transform; }
-.svc-tiles { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(22, minmax(0, 1fr)); grid-template-rows: repeat(10, minmax(0, 1fr)); }
-.svc-tile { background: var(--gold); box-shadow: 0 0 0 .5px var(--gold); }
+.svc-bg { position: relative; overflow: hidden; height: calc(100vw * 1020 / 1542); background: var(--ink); width: 100vw; margin-left: calc(50% - 50vw); }
+.svc-bg__img { position: absolute; inset: 0; background: url('img/w/wide-drilling.webp') center top / 100% 100% no-repeat; }
 .svc-callout { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 .svc-card { grid-column: 3 / span 10; background: #fff; padding: 1.5rem; }
 .svc-card .callout__heading { margin-bottom: 1.5rem; font-size: 1.5rem; line-height: 2rem; }
@@ -559,7 +557,8 @@ button.project-card:hover .project-thumb img { transform: scale(1.055); }
 @media (min-width: 768px) {
   .svc-container { max-width: 768px; margin-top: -20rem; }
   .svc-deco { top: 0; }
-  .svc-bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw; height: auto; }
+  .svc-container { min-height: calc(100vw * 1020 / 1542); }
+  .svc-bg { position: absolute; top: 0; left: 50%; width: 100vw; margin-left: -50vw; height: calc(100vw * 1020 / 1542); }
   .svc-card { grid-column: 7 / span 6; margin-top: 20rem; }
   .svc-card .callout__heading { margin-bottom: 2rem; font-size: 1.875rem; line-height: 2.25rem; }
   .svc-card .callout__subtext { margin-bottom: 2.5rem; padding-right: 1.5rem; font-size: 1.25rem; line-height: 1.75rem; }
@@ -683,7 +682,8 @@ html.lenis, html.lenis body { height: auto; }
 .careers-lines__right { grid-column: 11 / span 3; position: relative; }
 .careers-lines .tri-slot { left: 0; }
 .careers-bg { position: absolute; inset: 0; overflow: hidden; background: var(--ink); }
-.careers-bg__img { position: absolute; left: 0; right: 0; top: -12%; bottom: -12%; background: linear-gradient(90deg, rgba(10,12,11,.55), rgba(10,12,11,.7)), url('img/w/band-road.webp') left center / cover no-repeat; will-change: transform; }
+.careers-bg__img { position: absolute; left: 0; right: 0; top: -4%; bottom: -4%; background: url('img/w/careers-original.webp') 66% 0% / auto 130% no-repeat; will-change: transform; }
+.careers-bg::after { content: ""; position: absolute; inset: 0; background: rgba(10,12,11,.22); }
 .careers-container { position: relative; width: 100%; margin-inline: auto; }
 .careers-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 .careers-col { grid-column: 3 / span 8; }
@@ -702,7 +702,7 @@ html.lenis, html.lenis body { height: auto; }
   .careers { padding: 420px 0 16rem; }
   .careers-container { max-width: 768px; }
   .careers-lines { display: block; }
-  .careers-col { grid-column: 6 / span 5; }
+  .careers-col { grid-column: 1 / span 5; }
   .careers .callout__brow span { font-size: 1.25rem; }
   .careers .callout__heading { font-size: 2.25rem; line-height: 2.5rem; }
   .careers .callout__subtext { font-size: 1.5rem; line-height: 2rem; }
@@ -710,8 +710,8 @@ html.lenis, html.lenis body { height: auto; }
 }
 @media (min-width: 1024px) {
   .careers-container { max-width: 1024px; }
-  .careers-lines__left { display: block; }
-  .careers-col { grid-column: 8 / span 4; }
+  .careers-lines__left { display: none; }
+  .careers-col { grid-column: 2 / span 5; }
 }
 @media (min-width: 1280px) { .careers-container { max-width: 1280px; } }
 @media (min-width: 1536px) { .careers-container { max-width: 1536px; } .careers-lines__right .tri-slot { transform: translate(-33.333%, -50%); } }
@@ -815,7 +815,7 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 /* About page (about.html): same type scale, gold rule and tri-line artwork as the home page. */
 .ab-eyebrow--light { color: var(--champagne); }
 .ab-hero { position: relative; min-height: clamp(560px, 78svh, 760px); display: flex; align-items: center; background: var(--ink); color: #fff; overflow: hidden; padding: calc(var(--head-h) + 40px) 0 90px; }
-.ab-hero__photo { position: absolute; inset: -12% 0; background: url('img/w/hero-crew.webp') center / cover no-repeat; will-change: transform; }
+.ab-hero__photo { position: absolute; inset: 0; background: url('img/w/about-hero.webp') center 30% / cover no-repeat; }
 .ab-hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,10,8,.82), rgba(9,10,9,.45) 60%, rgba(0,0,0,.25)); }
 .ab-hero__wrap { position: relative; }
 .ab-hero__copy { max-width: 760px; padding-left: 24px; border-left: 2px solid var(--gold); display: grid; gap: 28px; justify-items: start; }
@@ -843,7 +843,7 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 /* Full-bleed image with copy on the right, gold vertical rule and line artwork either side. */
 .ab-banner { position: relative; background: var(--ink); color: #fff; padding: 22rem 0 6rem; overflow: hidden; }
 .ab-banner__bg { position: absolute; inset: 0; overflow: hidden; }
-.ab-banner__img { position: absolute; left: 0; right: 0; top: -12%; bottom: -12%; background: linear-gradient(90deg, rgba(10,12,11,.45), rgba(10,12,11,.7)), url('img/w/about-fleet.webp') left center / cover no-repeat; will-change: transform; }
+.ab-banner__img { position: absolute; left: 0; right: 0; top: -12%; bottom: -12%; background: linear-gradient(90deg, rgba(10,12,11,.45), rgba(10,12,11,.7)), url('img/w/about-excavator.webp') left center / cover no-repeat; will-change: transform; }
 .ab-banner__lines { position: absolute; inset: 0; z-index: 2; display: none; grid-template-columns: repeat(12, minmax(0, 1fr)); pointer-events: none; }
 .ab-banner__lines > div { position: relative; height: 100%; min-width: 0; }
 .ab-banner__lines > div:first-child { grid-column: 1 / span 3; }
@@ -897,7 +897,7 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 
 /* Services page */
 .ab-hero--services { padding-bottom: 170px; }
-.ab-hero--services .ab-hero__photo { background-image: url('img/w/hero-paver.webp'); }
+.ab-hero--services .ab-hero__photo { background-image: url('img/w/services-hero.webp'); }
 .sv-serve { position: relative; z-index: 5; background: #f5f5f3; }
 .sv-serve__panel { width: min(100%, 1280px); margin: -96px auto 0; background: #fff; padding: 0 clamp(20px, 4vw, 64px) 48px; position: relative; }
 .sv-serve__head { max-width: 760px; margin: 0 auto; padding: clamp(48px, 6vw, 80px) 0; text-align: center; }
@@ -943,5 +943,34 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 
 .ab-banner__lines, .careers-lines, .newsletter-lines, .footer-lines { opacity: .7; }
 
-/* Services tile reveal keeps its gold cover (the shared triangle style defaults to ink). */
-.svc-tiles 
+/* Careers (reference layout): original photo full-bleed, white text with the gold rule; the photo's subject is on the right, so the text sits on the left. */
+.careers-lines__left { display: none !important; }
+.careers .callout { text-shadow: 0 1px 14px rgba(0,0,0,.45); }
+
+/* About hero: the whole photo is shown (no cropping), starting below the fixed header so the face isn't hidden. */
+.ab-hero:not(.ab-hero--services) .ab-hero__photo { top: var(--head-h); background-position: center top; }
+@media (min-width: 768px) {
+  .ab-hero:not(.ab-hero--services) { min-height: calc(var(--head-h) + 56.28vw); }
+  .ab-hero:not(.ab-hero--services) .ab-hero__photo { bottom: auto; height: 56.28vw; background-size: 100% 100%; }
+}
+
+/* About hero: no dark overlay over the photo; a soft text shadow keeps the white copy readable. */
+.ab-hero:not(.ab-hero--services) .ab-hero__shade { display: none; }
+.ab-hero:not(.ab-hero--services) .ab-hero__copy { text-shadow: 0 1px 16px rgba(0,0,0,.55); }
+
+/* Services hero: whole photo shown, only a left-side shade behind the text, starting below the fixed header (same treatment as About). */
+.ab-hero--services { background: #f5f5f3; }
+.ab-hero--services .ab-hero__photo { top: var(--head-h); background-position: center top; }
+.ab-hero--services .ab-hero__shade { top: var(--head-h); background: rgba(8,10,8,.45); }
+.ab-hero--services .ab-hero__copy { text-shadow: 0 1px 16px rgba(0,0,0,.55); }
+@media (min-width: 768px) {
+  .ab-hero--services { min-height: calc(var(--head-h) + 56.28vw + 96px); }
+  .ab-hero--services .ab-hero__photo { bottom: auto; height: 56.28vw; background-size: 100% 100%; }
+  .ab-hero--services .ab-hero__shade { bottom: auto; height: 56.28vw; background: linear-gradient(90deg, rgba(8,10,8,.62) 0%, rgba(8,10,8,.45) 30%, rgba(8,10,8,.12) 55%, rgba(8,10,8,0) 70%); }
+}
+
+/* About hero: same left-side shade as the Services hero, confined to the photo. */
+.ab-hero:not(.ab-hero--services) .ab-hero__shade { display: block; top: var(--head-h); background: rgba(8,10,8,.45); }
+@media (min-width: 768px) {
+  .ab-hero:not(.ab-hero--services) .ab-hero__shade { bottom: auto; height: 56.28vw; background: linear-gradient(90deg, rgba(8,10,8,.62) 0%, rgba(8,10,8,.45) 30%, rgba(8,10,8,.12) 55%, rgba(8,10,8,0) 70%); }
+}

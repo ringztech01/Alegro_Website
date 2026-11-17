@@ -492,6 +492,10 @@
       gsap.timeline({ scrollTrigger: { trigger: tiles, start: 'top 80%', end: 'top 30%', scrub: SCRUB } })
         .to(tiles.children, { autoAlpha: 0, duration: 1, stagger: { each: .185, axis: 'y', from: 'random', grid: 'auto', ease: 'power1.in' } });
     });
+    // Services background photo: a smooth left-to-right wipe tied to the scroll (no tiles).
+    document.querySelectorAll('.svc-bg').forEach(bg => {
+      gsap.fromTo(bg.querySelector('.svc-bg__img'), { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', scrollTrigger: { trigger: bg, start: 'top 85%', end: 'top 25%', scrub: SCRUB } });
+    });
     document.querySelectorAll('[data-callout-block-reveal]').forEach(block => {
       const timeline = gsap.timeline({ scrollTrigger: { trigger: block, start: 'top 80%', end: 'bottom 80%', scrub: SCRUB } });
       timeline.from(block.querySelector('.callout__brow > span'), { autoAlpha: 0, y: '-=30', duration: 1 });
